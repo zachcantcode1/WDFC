@@ -24,10 +24,12 @@ export default function Home() {
       </a>
       <header className="site-header">
         <a href="#main" className="brand" aria-label={community.name}>
-          <img src="/images/server-icon.png" width="48" height="48" alt="" />
-          <span>
-            WARDOGS<span>FIGHT CLUB</span>
-          </span>
+          <img
+            src="/images/wdfc-header-lockup.webp"
+            width="512"
+            height="312"
+            alt=""
+          />
         </a>
         <span className="header-note">
           INDEPENDENT COMMUNITY / NORTH AMERICA
@@ -50,7 +52,7 @@ export default function Home() {
             <span className="photo-label">GOOD FIGHTS. BETTER COMPANY.</span>
             <span className="club-seal" aria-hidden="true">
               <img
-                src="/images/server-icon.png"
+                src="/images/wdfc-logo-512.webp"
                 width="128"
                 height="128"
                 alt=""

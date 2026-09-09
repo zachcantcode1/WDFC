@@ -70,8 +70,8 @@ a:focus-visible {
   top: 15px;
 }
 .site-header {
-  min-height: 96px;
-  padding: 20px 5%;
+  min-height: 92px;
+  padding: 14px 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -82,22 +82,12 @@ a:focus-visible {
 .brand {
   display: flex;
   align-items: center;
-  gap: 13px;
 }
 .brand img {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-}
-.brand > span {
-  font-family: var(--font-display), Impact, sans-serif;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: 0.03em;
-}
-.brand > span > span {
-  display: block;
+  width: 106px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 7px rgba(232, 188, 98, 0.22));
 }
 .header-note,
 .hero-bottom,
@@ -228,14 +218,10 @@ h1 > span:not(.sr-only) {
   position: absolute;
   top: -30px;
   right: -20px;
-  width: 128px;
-  height: 128px;
+  width: 142px;
+  height: 142px;
   display: grid;
   place-items: center;
-  overflow: hidden;
-  border: 2px solid var(--primary);
-  border-radius: 50%;
-  background: #111;
   transform: rotate(4deg);
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.45));
 }
@@ -243,8 +229,7 @@ h1 > span:not(.sr-only) {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: contain;
 }
 .hero-bottom {
   position: absolute;
@@ -477,8 +462,8 @@ footer > a:last-child {
     height: 510px;
   }
   .club-seal {
-    width: 108px;
-    height: 108px;
+    width: 118px;
+    height: 118px;
   }
   .story h2 {
     font-size: clamp(40px, 5vw, 60px);
@@ -506,18 +491,11 @@ footer > a:last-child {
 @media (max-width: 640px) {
   .site-header {
     min-height: 82px;
-    padding: 17px 6%;
+    padding: 10px 6%;
     gap: 14px;
   }
-  .brand {
-    gap: 9px;
-  }
   .brand img {
-    width: 37px;
-    height: 37px;
-  }
-  .brand > span {
-    font-size: 18px;
+    width: 94px;
   }
   .join-compact {
     min-width: 166px;
@@ -555,8 +533,8 @@ footer > a:last-child {
     object-position: center;
   }
   .club-seal {
-    width: 96px;
-    height: 96px;
+    width: 104px;
+    height: 104px;
     right: -13px;
     top: -20px;
   }
@@ -660,7 +638,7 @@ footer > a:last-child {
 }
 @media (max-width: 380px) {
   .brand img {
-    display: none;
+    width: 84px;
   }
   .closing h2 {
     font-size: 15vw;

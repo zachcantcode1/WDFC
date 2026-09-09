@@ -52,7 +52,9 @@ for (const asset of [
   '/images/meet-the-squad-960.webp',
   '/images/meet-the-squad-1440.webp',
   '/images/meet-the-squad-1672.webp',
-  '/images/server-icon.png',
+  '/images/wdfc-logo-192.png',
+  '/images/wdfc-logo-512.webp',
+  '/images/wdfc-header-lockup.webp',
   '/images/social-preview.webp',
 ]) {
   const response = await fetch(new URL(asset, siteUrl));

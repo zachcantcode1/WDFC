@@ -5,9 +5,26 @@ import sharp from 'sharp';
 const imageDirectory = path.resolve('public/images');
 const squadSource = path.resolve('assets/source/meet-the-squad.png');
 const heroSource = path.join(imageDirectory, 'community-1920.webp');
-const logoSource = path.join(imageDirectory, 'server-icon.png');
+const logoSource = path.resolve('assets/source/wdfc-logo.png');
+const headerLogoSource = path.resolve('assets/source/wdfc-header-lockup.png');
 
 await mkdir(imageDirectory, { recursive: true });
+
+await sharp(logoSource)
+  .resize(192, 192, { fit: 'contain' })
+  .png({ compressionLevel: 9, palette: true })
+  .toFile(path.join(imageDirectory, 'wdfc-logo-192.png'));
+
+await sharp(logoSource)
+  .resize(512, 512, { fit: 'contain' })
+  .webp({ quality: 90, effort: 6, alphaQuality: 100 })
+  .toFile(path.join(imageDirectory, 'wdfc-logo-512.webp'));
+
+await sharp(headerLogoSource)
+  .trim({ background: { r: 0, g: 0, b: 0, alpha: 0 }, threshold: 8 })
+  .resize({ width: 512, withoutEnlargement: true })
+  .webp({ quality: 90, effort: 6, alphaQuality: 100 })
+  .toFile(path.join(imageDirectory, 'wdfc-header-lockup.webp'));
 
 for (const width of [640, 960, 1440, 1672]) {
   await sharp(squadSource)
@@ -27,13 +44,16 @@ const socialOverlay = Buffer.from(`
   </svg>
 `);
 
-const logo = await sharp(logoSource).resize(150, 150).png().toBuffer();
+const logo = await sharp(logoSource)
+  .resize(170, 170, { fit: 'contain' })
+  .png()
+  .toBuffer();
 
 await sharp(heroSource)
   .resize(1200, 630, { fit: 'cover', position: 'center' })
   .grayscale()
   .modulate({ brightness: 0.72 })
-  .composite([{ input: socialOverlay }, { input: logo, left: 970, top: 60 }])
+  .composite([{ input: socialOverlay }, { input: logo, left: 960, top: 46 }])
   .webp({ quality: 88, effort: 6 })
   .toFile(path.join(imageDirectory, 'social-preview.webp'));
 

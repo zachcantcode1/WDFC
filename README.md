@@ -35,6 +35,14 @@ another community using the same image.
 The editable squad PNG is kept at `assets/source/meet-the-squad.png` so it is
 not included in the public site bundle.
 
+The official WDFC mark is kept at `assets/source/wdfc-logo.png`. The image
+preparation script creates a transparent 512px WebP for the page and a 192px
+PNG for browser icons. The previous server icon remains in
+`assets/source/legacy-server-icon.png` and is no longer published.
+
+The compact header lockup is kept at `assets/source/wdfc-header-lockup.png` and
+is published as a trimmed 512px WebP.
+
 - Hero: https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1867240/13fbc7cb084ec25c20ad031c7e888a9459cd8e77/ss_13fbc7cb084ec25c20ad031c7e888a9459cd8e77.1920x1080.jpg
 - Revival: https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1867240/672d7ce9debe7a3bcfa5feee5fccc3d8b482b13e/ss_672d7ce9debe7a3bcfa5feee5fccc3d8b482b13e.1920x1080.jpg
 - Logo: https://cdn.discordapp.com/icons/1536551110989447168/15fb93d815bbfb39b18cd43bb6a379b8.png?size=512
