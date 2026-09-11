@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Barlow_Condensed, Geist, Geist_Mono } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import { community } from '@/lib/community';
 import './globals.css';
 
@@ -58,6 +59,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${sans.variable} ${mono.variable} ${display.variable}`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
