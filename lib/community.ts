@@ -2,7 +2,7 @@ export type DiscordFeatureIcon = 'layout' | 'gift' | 'banknote';
 
 export const community = {
   name: 'WARDOGS FIGHT CLUB',
-  inviteUrl: 'https://discord.gg/ZvTg8g9YZ',
+  inviteUrl: 'https://discord.gg/RcPhSEuYgN',
   tagline: 'Good fights. Good laughs. Find your squad.',
   origin:
     'Fight Club started when downed players had to fight each other for a revive.',
